@@ -2,11 +2,11 @@ import {Suspense,useEffect,useState} from 'react'
 import {Canvas} from '@react-three/fiber'
 import {Html,OrbitControls,Preload,useGLTF} from '@react-three/drei'
 import  Load  from "./Load";
+import Scene from "./Scene";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
-
-  return (
+  
+  {/*return (
     <mesh>
       
       <hemisphereLight groundColor='#ffffff' intensity={3} />
@@ -18,7 +18,23 @@ const Computers = ({ isMobile }) => {
         rotation={[-0.01,-0.2,-0.1]}
       />
     </mesh>
-  )
+  )*/}
+
+
+  return(
+
+    <mesh>
+      
+      <hemisphereLight groundColor='#ffffff' intensity={3} />
+      <pointLight args={['#ffffff',3]} castShadow position={[0,0.2,0]}/>
+      
+      <Scene
+      scale={isMobile?0.7:0.75} position={isMobile?[0,-2.4,-2.2]:[0,-2.8,-1.5]} 
+      rotation={[-0.01,-0.2,-0.1]}
+      />
+    </mesh>
+
+  );
 };
 
 
