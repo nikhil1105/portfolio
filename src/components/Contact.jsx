@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef,useEffect } from 'react'
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
@@ -19,6 +19,23 @@ const Contact = () => {
   const [loading, setloading] = useState(false)
   const [pop , setpop ] = useState(false)
   const[err,seterr] = useState(false)
+
+  const [mob , setmob ] = useState(false)
+
+  useEffect(()=>{
+    const meadiaquery = window.matchMedia('(max-width:500px)');
+    setmob(meadiaquery.matches);
+
+    const handle = (e) => (setmob(e.matches));
+
+    meadiaquery.addEventListener('change',handle)
+
+    return()=>{
+      meadiaquery.removeEventListener('change',handle)
+    }
+
+  },[]);
+
 
   const handleChange = (e) => {
     const {name,value} = e.target;
@@ -135,7 +152,7 @@ const Contact = () => {
 
     <motion.div
     variants={slideIn('right','tween',0.2,1)}
-    className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+    className= {`${mob?'hidden':'flex'} xl:flex-1 xl:h-auto md:h-[550px] h-[350px]`}
     >
       <EarthCanvas/>
     </motion.div>
