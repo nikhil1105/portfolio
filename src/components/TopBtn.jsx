@@ -19,11 +19,12 @@ function TopBtn() {
     }
 
     return(
-        <div className= {`${ btn?'fixed': 'hidden'}  rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] m-11 h-11 cursor-pointer`}
+        <button className= {`${ btn?'fixed': 'hidden'}  rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] m-11 h-11 cursor-pointer`}
         onClick={scrollUp}
         >
+
             <img src={up} alt="up" className=" rounded-full w-9 h-9 "/>
-        </div>
+        </button>
     );
 }
 export default TopBtn;

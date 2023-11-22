@@ -65,10 +65,10 @@ const ProjectCard = ({ index, name, description , tags , image,source_code_link,
               </p>
             ))
           }
-          <span className=' text-black bg-[#915eff] p-1 rounded-full cursor-pointer border-white font-bold hover:text-white
+          <button className=' text-black bg-[#915eff] p-1 rounded-full cursor-pointer border-white font-bold hover:text-white
            hover:border-[3px] ' 
            onClick={()=>(window.open(project_link,'_blank'))}
-           >Live Demo</span>
+           >Live Demo</button>
         </div>
       </Tilt>
     </motion.div>
