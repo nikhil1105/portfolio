@@ -32,7 +32,7 @@ function TopBtn() {
                 outline: 'none !important'
             
         }}
-        className= {`${ btn?'fixed': 'hidden'}  rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] m-11 h-11 cursor-pointer`}
+        className= {`${ btn?'fixed': 'hidden'} flex justify-center items-center rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] w-11 h-11 cursor-pointer border-[#00ffff] border-[4px] hover:border-[#ffffff] hover:bg-white`}
         onClick={scrollUp}
         >
 
