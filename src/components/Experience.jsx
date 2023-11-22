@@ -7,7 +7,7 @@ import { experiences } from '../constants'
 import { SecWrap } from "../hoc";
 import { textVariant } from "../utils/motion";
 
-const ExperienceCard=({experience})=>(
+const ExperienceCard=({experience})=>{return(
   <VerticalTimelineElement
   contentStyle={{background:'#1d1836',color:'#fff'}}
   date={experience.date}
@@ -18,6 +18,7 @@ const ExperienceCard=({experience})=>(
       src={experience.icon}
       alt={experience.company_name}
       className='w-[60%] h-[60%] object-contain'
+
       />
     </div>
   }
@@ -44,19 +45,17 @@ const ExperienceCard=({experience})=>(
    </div>
   </VerticalTimelineElement>
 
-)
+);};
 
 const Experience = () => {
   return (
     <>
-    <motion.div
-    variants={textVariant()}
-    >
-      <p className={styles.sectionSubText}>Technologies I'm skilled in</p>
-      <h2 className={styles.sectionHeadText}>Skills</h2>
-    </motion.div>
+    <div>
+      <p className='sm:text-[18px] text-[14px] text-secondary  tracking-wider'>Technologies I'm skilled in</p>
+      <h2 className={`${styles.sectionHeadText} `}>My Skills</h2>
+    </div>
     <div
-    className='mt-20 flex flex-col'>
+    className='mt-15 flex flex-col'>
       <VerticalTimeline>
         {
           experiences.map((experience,index)=>(
@@ -70,4 +69,4 @@ const Experience = () => {
   )
 }
 
-export default SecWrap(Experience,'work')
+export default SecWrap(Experience)

@@ -42,7 +42,7 @@ const ServiceCard = ({ index, title, icon }) => {
   }
 
   return (
-    <Tilt className='xs:w-[250px] w-full touch-none mb-10 mr-7 sm:mb-0 sm:mr-0 select-none' >
+    <Tilt className='xs:w-[250px] w-full pb-5 touch-none mb-10 mr-7 sm:mb-0 sm:mr-0 select-none' >
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         onPointerDown={handleleave}
@@ -50,7 +50,7 @@ const ServiceCard = ({ index, title, icon }) => {
         onPointerLeave={handleleave}
         onPointerUp={handleleave}
         onPointerDownCapture={(e) => handlemove(e.pointerId)}
-        className='rounded-xl inset-4 relative xs:w-[200px] min-h-[230px]  w-full bg-[#915eff]'
+        className='rounded-xl inset-4 relative xs:w-[250px] min-h-[200px]  w-full bg-[#915eff]'
         style={{
           rotateY,
           rotateX,
@@ -97,7 +97,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
         variants={fadeIn('', '', 0.1, 1)}
       >
-        Enthusiastic and detail-oriented Full-stack Developer with a strong foundation in React.js, React Three Fiber, and Three.js. Proficient in frontend technologies, showcasing skills in React for creating dynamic and responsive user interfaces. Eager to apply theoretical knowledge and learnings from academic projects to contribute effectively to real-world development challenges. Committed to collaborative teamwork and passionate about enhancing user experiences in the digital space.
+        Enthusiastic and detail-oriented Full-stack Developer with a strong foundation in React.js and React Three Fiber. Proficient in frontend technologies, showcasing skills in React for creating dynamic and responsive user interfaces. Eager to apply theoretical knowledge and learnings from academic projects to contribute effectively to real-world development challenges. Committed to collaborative teamwork and passionate about enhancing user experiences in the digital space.
       </motion.p>
       <div
         className='mt-20 flex flex-wrap gap-10 '

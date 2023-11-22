@@ -1,20 +1,35 @@
 import {About,Contact,Experience,Feedbacks,Hero,Navbar,Tech,Works,StarsCanvas,TopBtn} from './components'
-
+import { useState,useEffect } from "react";
 
 
 const MainApp=()=> {
+  const [mob , setmob ] = useState(false)
+
+  useEffect(()=>{
+    const meadiaquery = window.matchMedia('(max-width:500px)');
+    setmob(meadiaquery.matches);
+
+    const handle = (e) => (setmob(e.matches));
+
+    meadiaquery.addEventListener('change',handle)
+
+    return()=>{
+      meadiaquery.removeEventListener('change',handle)
+    }
+
+  },[]);
 
   return (
     
     <div className='relative z-0 bg-primary'>
       <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
       <Navbar/>
-      <Hero/>
+      <Hero mob={mob}/>
       </div>
       <div id='about'>
       <About/>
       <Experience/>
-      <Tech/>
+      <Tech />
       </div>
       <div id='work' >
       <Works/>

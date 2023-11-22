@@ -7,7 +7,7 @@ import { SecWrap } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn,textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description , tags , image,source_code_Link }) => {
+const ProjectCard = ({ index, name, description , tags , image,source_code_link,project_link}) => {
 
   return (
     
@@ -33,7 +33,7 @@ const ProjectCard = ({ index, name, description , tags , image,source_code_Link 
           className=' absolute inset-0 flex justify-end m-3 '
           >
             <div
-            onClick={()=>(window.open(source_code_Link,'_blank'))}
+            onClick={()=>(window.open(source_code_link,'_blank'))}
             className=' black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer '
             >
               <img
@@ -66,7 +66,9 @@ const ProjectCard = ({ index, name, description , tags , image,source_code_Link 
             ))
           }
           <span className=' text-black bg-[#915eff] p-1 rounded-full cursor-pointer border-white font-bold hover:text-white
-           hover:border-[3px] '>Live Demo</span>
+           hover:border-[3px] ' 
+           onClick={()=>(window.open(project_link,'_blank'))}
+           >Live Demo</span>
         </div>
       </Tilt>
     </motion.div>

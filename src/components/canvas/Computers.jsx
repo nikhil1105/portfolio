@@ -6,20 +6,6 @@ import Scene from "./Scene";
 
 const Computers = ({ isMobile }) => {
   
-  {/*return (
-    <mesh>
-      
-      <hemisphereLight groundColor='#ffffff' intensity={3} />
-      <pointLight args={['#ffffff',3]} castShadow position={[0,0.2,0]}/>
-      
-      <primitive
-        object={computer.scene}
-        scale={isMobile?0.7:0.75} position={isMobile?[0,-2.4,-2.2]:[0,-2.8,-1.5]} 
-        rotation={[-0.01,-0.2,-0.1]}
-      />
-    </mesh>
-  )*/}
-
 
   return(
 
@@ -60,10 +46,9 @@ const ComputerCanvas =()=>{
 
   
   return(
-
+    <span className={`${isMobile?'hidden':''}`} >
     <Canvas frameloop='demand' shadows
     camera={{position:[20,3,5],fov:25}}>
-      
       <Suspense  fallback={<Load/>}>
       <OrbitControls enableZoom={false} 
       maxPolarAngle={Math.PI/2}
@@ -74,7 +59,7 @@ const ComputerCanvas =()=>{
     <Preload all/>
     
     </Canvas>
-    
+    </span>
   );
 }
 

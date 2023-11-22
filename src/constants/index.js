@@ -254,7 +254,8 @@ const projects = [
       },
     ],
     image: imgsearchweb,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nikhil1105/ImageSearchWebsite.git",
+    project_link:'https://imagesearchweb-app.netlify.app/'
   },
   {
     name: "Music Player",
@@ -275,7 +276,8 @@ const projects = [
       },
     ],
     image: musicweb,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nikhil1105/spotify.git",
+    project_link:'https://music-play-web.netlify.app/'
   },
   {
     name: "Portfolio Website",
@@ -296,7 +298,8 @@ const projects = [
       },
     ],
     image: port,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/nikhil1105/portfolio.git",
+    project_link:'https://portfolio-nikhil-gupta.netlify.app/'
   },
 ];
 
