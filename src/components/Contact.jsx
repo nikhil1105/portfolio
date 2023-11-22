@@ -19,6 +19,7 @@ const Contact = () => {
   const [loading, setloading] = useState(false)
   const [pop , setpop ] = useState(false)
   const[err,seterr] = useState(false)
+  const [wrginput,setwrginput] = useState(false)
 
   const [mob , setmob ] = useState(false)
 
@@ -43,8 +44,14 @@ const Contact = () => {
 
    }
   const handleSubmit = (e) => {
-    
+    seterr(false);
+    setpop(false);
+    setwrginput(false);
     e.preventDefault();
+    if((form.email==='')?true:(form.name==='')?true:(form.message==='')?true:false ) {
+      setwrginput(true)
+    }
+    else{
     setloading(true);
     emailjs.send('service_vzeve3i','template_ur4kqfo',
     {
@@ -70,6 +77,7 @@ const Contact = () => {
         console.log(error);
       }
     )
+    };
 
   }
   return (
@@ -96,6 +104,7 @@ const Contact = () => {
               Your Name
             </span>
             <input
+              required
               type='text'
               name='name'
               value={form.name}
@@ -109,7 +118,8 @@ const Contact = () => {
               Your Email
             </span>
             <input
-              type='text'
+              required
+              type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
@@ -122,6 +132,10 @@ const Contact = () => {
               Your Message
             </span>
             <textarea
+              style={{
+                resize:'none'
+              }}
+              required
               rows={7}
               name='message'
               onChange={handleChange}
@@ -130,19 +144,35 @@ const Contact = () => {
               className=' bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <button type='submit'
-          onClick={(e)=>{handleSubmit(e);seterr(false);setpop(false)}}
+          <button
+           type='submit'
+           style={{
+            
+            WebkitTapHighlightColor: 'transparent',
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            KhtmlUserSelect: 'none',
+            MozUserSelect: 'none',
+            msUserSelect: 'none',
+            userSelect: 'none',
+            outline: 'none !important'
+        
+    }}
+           onClick={(e)=>handleSubmit(e)}
           className=' bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-primary rounded-xl'
           >
             {loading?'sending...':'send'}
           </button>
           <div>
 
-          <p className={`${pop?'block':'hidden'} sm:text-[18px] text-[14px] text-green-500 tracking-wider`}>
+          <p className={`${!pop?'hidden':(wrginput)?'hidden':'block'} sm:text-[18px] text-[14px] text-green-500 tracking-wider`}>
           <span className='text-[30px]'>Thank you.</span><br/>I will contact you as soon as possible.
           </p>  
           <p className={`${err?'block':'hidden'} sm:text-[18px] text-[14px] text-red-500 tracking-wider`}>
           <span className='text-[30px]'>Something went wrong.</span>
+          </p> 
+          <p className={`${wrginput?'block':'hidden'} sm:text-[18px] text-[14px] text-yellow-500 tracking-wider`}>
+          <span className='text-[30px]'>Please Enter Right Details.</span>
           </p>          
 
           </div>
@@ -160,5 +190,4 @@ const Contact = () => {
     </div>
   )
 }
-
 export default SecWrap(Contact, 'contact')

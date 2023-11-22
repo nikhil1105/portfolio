@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import {VerticalTimeline,VerticalTimelineElement} from 'react-vertical-timeline-component'
 import {motion } from 'framer-motion'
 import 'react-vertical-timeline-component/style.min.css';
@@ -9,6 +9,7 @@ import { textVariant } from "../utils/motion";
 
 const ExperienceCard=({experience})=>{return(
   <VerticalTimelineElement
+
   contentStyle={{background:'#1d1836',color:'#fff'}}
   date={experience.date}
   iconStyle={{background:experience.iconBg}}
@@ -48,6 +49,23 @@ const ExperienceCard=({experience})=>{return(
 );};
 
 const Experience = () => {
+  const [mob , setmob ] = useState(false)
+
+  useEffect(()=>{
+    const meadiaquery = window.matchMedia('(max-width:500px)');
+    setmob(meadiaquery.matches);
+
+    const handle = (e) => (setmob(e.matches));
+
+    meadiaquery.addEventListener('change',handle)
+
+    return()=>{
+      meadiaquery.removeEventListener('change',handle)
+    }
+
+  },[]);
+
+  
   return (
     <>
     <div>
@@ -56,7 +74,9 @@ const Experience = () => {
     </div>
     <div
     className='mt-15 flex flex-col'>
-      <VerticalTimeline>
+      <VerticalTimeline
+      animate={!mob}
+      >
         {
           experiences.map((experience,index)=>(
             <ExperienceCard key={index} experience={experience}/>
