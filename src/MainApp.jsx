@@ -40,7 +40,9 @@ const MainApp=()=> {
 
       <Contact/>
       <div id='contact'>
+      <span className={`${mob?'hidden':'block'}`} >
       <StarsCanvas/>
+      </span>
       </div>
       <TopBtn/>
       </div>
