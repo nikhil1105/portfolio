@@ -19,7 +19,20 @@ function TopBtn() {
     }
 
     return(
-        <button className= {`${ btn?'fixed': 'hidden'}  rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] m-11 h-11 cursor-pointer`}
+        <button
+        style={{
+            
+                WebkitTapHighlightColor: 'transparent',
+                WebkitTouchCallout: 'none',
+                WebkitUserSelect: 'none',
+                KhtmlUserSelect: 'none',
+                MozUserSelect: 'none',
+                msUserSelect: 'none',
+                userSelect: 'none',
+                outline: 'none !important'
+            
+        }}
+        className= {`${ btn?'fixed': 'hidden'}  rounded-full bg-[#1f0a4e] bottom-[20px] right-[10px] m-11 h-11 cursor-pointer`}
         onClick={scrollUp}
         >
 

@@ -65,7 +65,20 @@ const ProjectCard = ({ index, name, description , tags , image,source_code_link,
               </p>
             ))
           }
-          <button className=' text-black bg-[#915eff] p-1 rounded-full cursor-pointer border-white font-bold hover:text-white
+          <button
+          style={{
+            
+            WebkitTapHighlightColor: 'transparent',
+            WebkitTouchCallout: 'none',
+            WebkitUserSelect: 'none',
+            KhtmlUserSelect: 'none',
+            MozUserSelect: 'none',
+            msUserSelect: 'none',
+            userSelect: 'none',
+            outline: 'none !important'
+        
+    }}
+          className=' text-black bg-[#915eff] p-1 rounded-full cursor-pointer border-white font-bold hover:text-white
            hover:border-[3px] ' 
            onClick={()=>(window.open(project_link,'_blank'))}
            >Live Demo</button>
