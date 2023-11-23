@@ -24,6 +24,18 @@ const Navbar = () => {
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link to='/' className='flex items-center gap-2 '
+        style={{
+            
+          WebkitTapHighlightColor: 'transparent',
+          WebkitTouchCallout: 'none',
+          WebkitUserSelect: 'none',
+          KhtmlUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
+          userSelect: 'none',
+          outline: 'none !important'
+      
+  }}
           onClick={() => {
             setActive('')
             window.scrollTo(0, 0)
@@ -44,6 +56,18 @@ const Navbar = () => {
                 
               >
                 <span 
+                style={{
+            
+                  WebkitTapHighlightColor: 'transparent',
+                  WebkitTouchCallout: 'none',
+                  WebkitUserSelect: 'none',
+                  KhtmlUserSelect: 'none',
+                  MozUserSelect: 'none',
+                  msUserSelect: 'none',
+                  userSelect: 'none',
+                  outline: 'none !important'
+              
+          }}
                 onClick={() =>{ setActive(link.title);handleclick(link.id)}}
                   
                  >{link.title}</span>
@@ -68,6 +92,18 @@ const Navbar = () => {
                     
                   >
                     <span 
+                    style={{
+            
+                      WebkitTapHighlightColor: 'transparent',
+                      WebkitTouchCallout: 'none',
+                      WebkitUserSelect: 'none',
+                      KhtmlUserSelect: 'none',
+                      MozUserSelect: 'none',
+                      msUserSelect: 'none',
+                      userSelect: 'none',
+                      outline: 'none !important'
+                  
+              }}
                 onClick={() => { setActive(link.title); setToggle(!toggle);handleclick(link.id) }}
                  >{link.title}</span>
                   </li>

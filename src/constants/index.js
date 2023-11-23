@@ -227,6 +227,28 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Portfolio Website",
+    description:
+      "Designed a dynamic portfolio website, seamlessly blending creativity and technology with React,React Three Fiber, Framer Motion, and Tailwind CSS for a visually striking and responsive user showcase.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ReactThreeFiber",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: port,
+    source_code_link: "https://github.com/nikhil1105/portfolio.git",
+    project_link:'https://portfolio-nikhil-gupta.netlify.app/'
+  },
+  {
     name: "Image Search Web",
     description:
       "Developed a dynamic and responsive image search engine using HTML, CSS, and JavaScript.",
@@ -270,28 +292,7 @@ const projects = [
     source_code_link: "https://github.com/nikhil1105/spotify.git",
     project_link:'https://music-play-web.netlify.app/'
   },
-  {
-    name: "Portfolio Website",
-    description:
-      "Designed a dynamic portfolio website, seamlessly blending creativity and technology with React,React Three Fiber, Framer Motion, and Tailwind CSS for a visually striking and responsive user showcase.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Tailwindcss",
-        color: "green-text-gradient",
-      },
-      {
-        name: "ReactThreeFiber",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: port,
-    source_code_link: "https://github.com/nikhil1105/portfolio.git",
-    project_link:'https://portfolio-nikhil-gupta.netlify.app/'
-  },
+ 
 ];
 
 export { services, technologies, experiences, testimonials, projects };
