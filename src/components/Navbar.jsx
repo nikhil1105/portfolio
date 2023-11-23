@@ -55,7 +55,7 @@ const Navbar = () => {
                 font-medium cursor-pointer `}
                 
               >
-                <span 
+                <button 
                 style={{
             
                   WebkitTapHighlightColor: 'transparent',
@@ -70,7 +70,7 @@ const Navbar = () => {
           }}
                 onClick={() =>{ setActive(link.title);handleclick(link.id)}}
                   
-                 >{link.title}</span>
+                 >{link.title}</button>
               </li>
             )))
           }
@@ -78,6 +78,18 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img src={toggle ? menu : close} alt="menu" className='w-[28px] h-[28px] object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
+            style={{
+            
+              WebkitTapHighlightColor: 'transparent',
+              WebkitTouchCallout: 'none',
+              WebkitUserSelect: 'none',
+              KhtmlUserSelect: 'none',
+              MozUserSelect: 'none',
+              msUserSelect: 'none',
+              userSelect: 'none',
+              outline: 'none !important'
+          
+      }}
           />
           <div className={`${toggle ? 'hidden' : 'flex'} absolute rounded-xl black-gradient p-6 top-[50px] right-0 mx-4 my-2 min-w-[140px] z-10 `}>
             <ul className='list-none flex flex-col justify-end items-start gap-4 '>
@@ -91,7 +103,7 @@ const Navbar = () => {
                       } font-medium cursor-pointer text-[16px]`}
                     
                   >
-                    <span 
+                    <button 
                     style={{
             
                       WebkitTapHighlightColor: 'transparent',
@@ -105,7 +117,7 @@ const Navbar = () => {
                   
               }}
                 onClick={() => { setActive(link.title); setToggle(!toggle);handleclick(link.id) }}
-                 >{link.title}</span>
+                 >{link.title}</button>
                   </li>
                 )))
               }
