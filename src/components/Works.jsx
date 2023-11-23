@@ -103,7 +103,7 @@ const Works = () => {
     variants={fadeIn('','',0.1,1)}
     className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
     >
-      Designed and implemented diverse web projects showcasing a breadth of technical skills. Crafted an image search engine with HTML, CSS, and JavaScript, seamlessly integrating JavaScript API. Developed music player website offering a dynamic Music experience using HTML, CSS, and JavaScript. For my portfolio site, I leveraged cutting-edge technologies, including React, Redux, React Three Fiber, Tailwind CSS, and Framer Motion, combining creativity with technical prowess to deliver a visually striking and interactive user experience.
+      I leveraged cutting-edge technologies, including React, Redux, React Three Fiber, Tailwind CSS, and Framer Motion, to design and implement my portfolio site. This showcase demonstrates my creative approach coupled with technical prowess, delivering a visually striking and interactive user experience. In addition to my portfolio, I've crafted various web projects highlighting a breadth of technical skills. One notable project is an image search engine seamlessly integrated with a JavaScript API, developed using HTML, CSS, and JavaScript. Another project involves the creation of a dynamic music player website, enhancing the music experience for users through the use of HTML, CSS, and JavaScript.
       </motion.p>
     <div
         className='mt-20 flex flex-wrap gap-10 '
