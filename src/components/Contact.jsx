@@ -53,7 +53,7 @@ const Contact = () => {
     }
     else{
     setloading(true);
-    emailjs.send('service_vzeve3i','template_ur4kqfo',
+    emailjs.send('service_vzeve3i','template_myvlnro',
     {
       from_name:form.name,
       to_name:'nikhil',
