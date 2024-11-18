@@ -97,7 +97,7 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
         variants={fadeIn('', '', 0.1, 1)}
       >
-        Enthusiastic and detail-oriented Full-stack Developer with a strong foundation in React.js and React Three Fiber. Proficient in frontend technologies, showcasing skills in React for creating dynamic and responsive user interfaces. Eager to apply theoretical knowledge and learnings from academic projects to contribute effectively to real-world development challenges. Committed to collaborative teamwork and passionate about enhancing user experiences in the digital space.
+        Enthusiastic and detail-oriented Full-stack Developer with a strong foundation in React.js and React Three Fiber. Proficient in frontend technologies, showcasing skills in React for creating dynamic and responsive user interfaces. Eager to apply theoretical knowledge and learnings from projects to contribute effectively to real-world development challenges. Committed to collaborative teamwork and passionate about enhancing user experiences in the digital space.
       </motion.p>
       <div
         className='mt-20 flex flex-wrap gap-10 '

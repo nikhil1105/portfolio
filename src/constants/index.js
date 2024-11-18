@@ -6,10 +6,10 @@ import {
   backend,
   creator,
   web,
-  javascript,
+  cypress,
   typescript,
-  html,
-  css,
+  rhf,
+  jest,
   reactjs,
   redux,
   tailwind,
@@ -56,25 +56,16 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-
-  {
     name: "React JS",
     icon: reactjs,
   },
   {
     name: "Redux Toolkit",
     icon: redux,
+  },
+  {
+    name: "Typescript",
+    icon: typescript,
   },
   {
     name: "Tailwind CSS",
@@ -96,13 +87,26 @@ const technologies = [
     name: "git",
     icon: git,
   },
+  {
+    name: "jest",
+    icon: jest,
+  },
+  {
+    name: "react form hook",
+    icon: rhf,
+  },
+  {
+    name: "cypress",
+    icon: cypress,
+  },
+
 
 ];
 
 const experiences = [
   {
     title: "React.js",
-    company_name: "Intermediate",
+    company_name: "",
     icon: reactjs,
     iconBg: "#383E56",
 
@@ -110,14 +114,12 @@ const experiences = [
       'Proficient in building dynamic and responsive user interfaces using React.js.',
       'Experience with state management, component lifecycle, and hooks.',
       'Developed scalable and maintainable React applications for My Portfolio And Academic projects.',
-      'Familiar with integrating third- party libraries and APIs into React applications.',
-      'Continuously staying updated on the latest React developments and best practices.',
 
     ],
   },
   {
     title: "Redux",
-    company_name: "Intermediate",
+    company_name: "",
     icon: redux,
     iconBg: "#383E56",
 
@@ -125,65 +127,58 @@ const experiences = [
       'Proficient in using Redux for state management in complex React applications.',
       'Developing proficiency in integrating Redux with React components to manage application state.',
       'Enthusiastically learning and exploring Redux best practices to enhance state management skills.',
-      
+
 
     ],
   },
   {
     title: "React Three Fiber / Three js",
-    company_name: "Intermediate",
+    company_name: "",
     icon: threejs,
     iconBg: "#E6DEDD",
     points: [
       'Expertise in utilizing React Three Fiber to create declarative and interactive 3D graphics within React applications.',
       'Demonstrated ability to translate design concepts into immersive 3D web experiences.',
       'Implemented advanced features such as shaders, lighting, and animations using React Three Fiber.',
-      'Collaborated with design teams to seamlessly integrate 3D elements into the overall user interface.',
-      'Stay abreast of updates and advancements in React Three Fiber to ensure optimal utilization in projects.',
     ],
   },
   {
     title: "Framer Motion",
-    company_name: "Intermediate",
+    company_name: "",
     icon: framermotion,
     iconBg: "#383E56",
     points: [
       'Proficient in leveraging Framer Motion to create smooth and engaging animations within React applications.',
       'Experience with implementing complex animations, transitions, and gesture-based interactions.',
       'Utilized Framer Motion to enhance user experience through dynamic and visually appealing UI elements.',
-      'Collaborated with design teams to integrate Framer Motion seamlessly into the overall application design.',
-      'Stay current with Framer Motion updates and enhancements to incorporate the latest features into projects.',
     ],
   },
   {
     title: "Tailwind CSS",
-    company_name: "Intermediate",
+    company_name: "",
     icon: tailwind,
     iconBg: "#E6DEDD",
     points: [
       'Proficient in using Tailwind CSS to streamline and accelerate the styling process in web development projects.',
       'Experience with the utility-first approach for building responsive and scalable user interfaces.',
       'Demonstrated ability to customize and extend Tailwind CSS to match specific design requirements.',
-      'Utilized Tailwind CSS to maintain a consistent and efficient design system across applications.',
-      'Stay informed about updates and new features in Tailwind CSS to leverage the latest capabilities in projects.',
     ],
   },
   {
     title: "Node js",
-    company_name: "Intermediate",
+    company_name: "",
     icon: nodejs,
     iconBg: "#E6DEDD",
     points: [
       'Proficient in server-side development with Node.js, utilizing its event-driven architecture for scalable applications.',
       'Experience in building RESTful APIs and integrating them seamlessly with frontend applications.',
-      'Competent in utilizing npm packages and managing dependencies to enhance development efficiency.',
       'Familiarity with Express.js for creating robust and modular server-side applications.',
-      'Stay abreast of Node.js updates and best practices to ensure optimal performance and security in projects.'
-    ],}
-    ,
-    {
+    ],
+  }
+  ,
+  {
     title: "MongoDB",
-    company_name: "Intermediate",
+    company_name: "",
     icon: mongodb,
     iconBg: "#E6DEDD",
     points: [
@@ -191,10 +186,46 @@ const experiences = [
       'Experience designing and implementing data models to meet application requirements.',
       'Competent in performing CRUD operations and aggregations to retrieve and manipulate data.',
       'Familiarity with indexing, sharding, and other MongoDB optimization techniques.',
-      'Stay informed about MongoDB updates and features to leverage the latest capabilities in database design and management.'
     ],
-    
 
+
+  },
+  {
+    title: "React Form Hook",
+    company_name: "",
+    icon: rhf,
+    iconBg: "#E6DEDD",
+    points: [
+      'Proficient in using React Hook Form for building efficient and scalable forms in React applications.',
+      'Experienced in managing form state, validation, and handling complex form interactions with minimal re-renders.',
+      'Regularly leverage React Hook Form’s features like custom validation, field arrays, and integration with UI libraries.'
+
+    ],
+  },
+
+  {
+    title: "Jest",
+    company_name: "",
+    icon: jest,
+    iconBg: "#E6DEDD",
+    points: [
+      'Proficient in writing and executing unit, integration, and end-to-end tests using Jest.',
+      'Expertise in using Jest’s features like mocks, spies, snapshot testing, and code coverage.',
+      'Regularly update testing practices to leverage new Jest features for optimal performance.'
+
+    ],
+  },
+  {
+    title: "Cypress",
+    company_name: "",
+    icon: cypress,
+    iconBg: "#E6DEDD",
+    points: [
+      'Proficient in using Cypress for end-to-end testing and automation of web applications.',
+      'Experienced in writing and running tests for UI, API interactions, and handling various test scenarios.',
+      'Regularly leverage Cypress features like time travel, network stubbing, and parallel test execution for faster test cycles.'
+
+    ],
   },
 ];
 
@@ -246,53 +277,61 @@ const projects = [
     ],
     image: port,
     source_code_link: "https://github.com/nikhil1105/portfolio.git",
-    project_link:'https://portfolio-nikhil-gupta.netlify.app/'
+    project_link: 'https://portfolio-nikhil-gupta.netlify.app/'
   },
   {
-    name: "Image Search Web",
+    name: "PriceTrack",
     description:
-      "Developed a dynamic and responsive image search engine using HTML, CSS, and JavaScript.",
+      "A custom web scraping tool that tracks and compares product prices across major e-commerce sites like Amazon.",
     tags: [
       {
-        name: "html",
+        name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
+        name: "Web Scraping",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Redux.js",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Tailwind CSS",
         color: "green-text-gradient",
       },
       {
-        name: "javascript",
-        color: "pink-text-gradient",
+        name: "TypeScript",
+        color: "blue-text-gradient",
       },
     ],
     image: imgsearchweb,
-    source_code_link: "https://github.com/nikhil1105/ImageSearchWebsite.git",
-    project_link:'https://imagesearchweb-app.netlify.app/'
+    source_code_link: "https://github.com/nikhil1105/PriceTrack.git",
+    project_link: 'https://price-trackr.vercel.app/'
   },
   {
-    name: "Music Player",
+    name: "TheGlitchCity",
     description:
-      "music player website utilizing HTML, CSS, and JavaScript.",
+      "Designed and developed a cutting-edge event and club management website using the MERN stack, enriched with immersive Three.js visual effects for unparalleled user experiences.",
     tags: [
       {
-        name: "html",
+        name: "MERN Stack",
         color: "blue-text-gradient",
       },
       {
-        name: "css",
-        color: "green-text-gradient",
+        name: "Redux.js",
+        color: "pink-text-gradient",
       },
       {
-        name: "javascript",
-        color: "pink-text-gradient",
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
       },
     ],
     image: musicweb,
-    source_code_link: "https://github.com/nikhil1105/spotify.git",
-    project_link:'https://music-play-web.netlify.app/'
+    source_code_link: "https://github.com/nikhil1105/GlitchCityFull.git",
+    project_link: 'https://theglitchcity.netlify.app/'
   },
- 
+
 ];
 
 export { services, technologies, experiences, testimonials, projects };

@@ -7,7 +7,7 @@ export default function Motionspan() {
 
 
         <div className='mb-3 w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 cursor-pointer'
-          onClick={() => document.getElementById('about').scrollIntoView({ behavior: "smooth" })}
+          //onClick={() => document.getElementById('about').scrollIntoView({ behavior: "smooth" })}
         >
 
           <motion.div className='w-3 h-3 bg-secondary mb-1 rounded-full'

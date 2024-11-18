@@ -9,6 +9,9 @@ import close from "./close.svg";
 import up from "./up.png";
 import css from "./tech/css.png";
 
+import cypress from "./tech/cypress.jpg";
+import rhf from "./tech/react-hook-form.png";
+import jest from "./tech/jest.jpg";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -25,6 +28,9 @@ import musicweb from "./musicweb.png";
 import port from './portfolio.png';
 
 export {
+  cypress,
+  rhf,
+  jest,
   up,
   logo,
   backend,
