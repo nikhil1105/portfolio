@@ -351,7 +351,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: musicweb,
+    image: marblerace,
     source_code_link: "https://github.com/nikhil1105/Marble_Race.git",
     project_link: 'https://marble-race-nikhil.vercel.app/'
   },
