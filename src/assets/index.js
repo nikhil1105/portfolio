@@ -26,7 +26,7 @@ import framermotion from "./tech/framermotion.png";
 import imgsearchweb from "./imgsearchweb.png";
 import musicweb from "./musicweb.png";
 import port from './portfolio.png';
-
+import marblerace from './marblerace.jpg';
 export {
   cypress,
   rhf,
@@ -54,5 +54,6 @@ export {
   framermotion,
   musicweb,
   imgsearchweb,
-  port
+  port,
+  marblerace
 };
