@@ -2,6 +2,7 @@ import {
   imgsearchweb,
   port,
   musicweb,
+  marblerace,
   mobile,
   backend,
   creator,
@@ -263,7 +264,7 @@ const projects = [
       "Designed a dynamic portfolio website, seamlessly blending creativity and technology with React,React Three Fiber, Framer Motion, and Tailwind CSS for a visually striking and responsive user showcase.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
@@ -330,6 +331,29 @@ const projects = [
     image: musicweb,
     source_code_link: "https://github.com/nikhil1105/GlitchCityFull.git",
     project_link: 'https://theglitchcity.netlify.app/'
+  },
+ {
+    name: "Marble Race",
+    description:
+      "3D interactive game using React, React Three Fiber, and Zustand for efficient state management Integrated localStorage for persistent data management across page refreshes.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+     
+      {
+        name: " React Three Fiber",
+        color: "green-text-gradient",
+      },
+     {
+        name: "Zustand",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: musicweb,
+    source_code_link: "https://github.com/nikhil1105/Marble_Race.git",
+    project_link: 'https://marble-race-nikhil.vercel.app/'
   },
 
 ];
